@@ -24,11 +24,15 @@ if user_preferred_level.lower() == "e" or user_preferred_level.lower() == "easy"
     guess_attempt = 0
     number_of_allowed_attempt = 6
     while guess_attempt < number_of_allowed_attempt:
-        guessed = int(input("Guess: "))
-        if guessed == random_number:
-            print("You have won!")
-            break
+        try:
+            guessed = int(input("Guess: "))
+            if guessed == random_number:
+                print("You have won!")
+                break
+        except ValueError:
+            print("type in a number between 1 to 10")
         guess_attempt += 1
+
     else:
         print("You have typed in wrong answer 6 times" +
               "\nYou have failed" +
@@ -43,10 +47,13 @@ elif user_preferred_level.lower() == "m" or user_preferred_level.lower() == "med
     guess_attempt = 0
     number_of_allowed_attempt = 4
     while guess_attempt < number_of_allowed_attempt:
-        guessed = int(input("Guess: "))
-        if guessed == random_number:
-            print("You have won!")
-            break
+        try:
+            guessed = int(input("Guess: "))
+            if guessed == random_number:
+                print("You have won!")
+                break
+        except ValueError:
+            print("type in a number between 1 to 20")
         guess_attempt += 1
     else:
         print("You have typed in wrong answer 4 times" +
@@ -61,13 +68,25 @@ elif user_preferred_level.lower() == "h" or user_preferred_level.lower() == "har
     guess_attempt = 0
     number_of_allowed_attempt = 3
     while guess_attempt < number_of_allowed_attempt:
-        guessed = int(input("Guess: "))
-        if guessed == random_number:
-            print("You have won!")
-            break
+        try:
+            guessed = int(input("Guess: "))
+            if guessed == random_number:
+                print("You have won!")
+                break
+        except ValueError:
+            print("type in a number between 1 to 50")
         guess_attempt += 1
     else:
         print("You have typed in wrong answer 3 times" +
               "\nYou have failed" +
               "\nGame Over!")
+
+
+else:
+    print("""
+    Restart the program and 
+    For Easy level : press e or easy to play this level or
+    For Medium level : press m or medium to play this level or
+    For Hard level : press h or hard to play this level.
+    """)
 
