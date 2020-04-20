@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import random as rd
 # Greet user
 print("Hi user, welcome to Number Guessing Game!")
