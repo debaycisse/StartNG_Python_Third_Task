@@ -14,7 +14,8 @@ Hard : here, you have 3 times attempt to guess a number which is between 1 and 5
 
 # Get user's preferred level
 user_preferred_level = input("What level will you like to play?" +
-                             "\nType E for (E)asy or M for (M)edium or H for(H)ard : ")
+                             "\nType E for (E)asy or M for (M)edium or H
+                             for(H)ard :")
 
 
 # Easy level
