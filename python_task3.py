@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import random as rd
 # Greet user
 print("Hi user, welcome to Number Guessing Game!")
@@ -24,7 +25,7 @@ if user_preferred_level.lower() == "e" or user_preferred_level.lower() == "easy"
     guess_attempt = 0
     number_of_allowed_attempt = 6
     while guess_attempt < number_of_allowed_attempt:
-        guessed = input("Guess: ")
+        guessed = int(input("Guess: "))
         if guessed == random_number:
             print("You have won!")
             break
@@ -43,7 +44,7 @@ elif user_preferred_level.lower() == "m" or user_preferred_level.lower() == "med
     guess_attempt = 0
     number_of_allowed_attempt = 4
     while guess_attempt < number_of_allowed_attempt:
-        guessed = input("Guess: ")
+        guessed = int(input("Guess: "))
         if guessed == random_number:
             print("You have won!")
             break
@@ -61,7 +62,7 @@ elif user_preferred_level.lower() == "h" or user_preferred_level.lower() == "har
     guess_attempt = 0
     number_of_allowed_attempt = 3
     while guess_attempt < number_of_allowed_attempt:
-        guessed = input("Guess: ")
+        guessed = int(input("Guess: "))
         if guessed == random_number:
             print("You have won!")
             break
